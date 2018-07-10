@@ -26,11 +26,13 @@
         </div>
         <div class="button" onclick="fn()">确定</div>
     </div>
-
+    <img src="timg.jpg" alt="" class="img">
 </body>
 <script>
 let info = document.querySelector(".info")
 let con = document.querySelector(".con")
+let img = document.querySelector(".img")
+let type = 0
 let arr1 = [
     "工资上交",
     "家务全包",
@@ -39,11 +41,18 @@ let arr1 = [
     "答应我吧"
 ]
 function ok() {
+    if(type==1){
+        return
+    }
     info.style.display = "block"
     con.innerText = "真的吗？爱你😘"
+    type = 1
 }
 let i = 0;
 function no() {
+    if(type==1){
+        return
+    }
     info.style.display = "block"
     con.innerText = arr1[i]
     i++
@@ -54,6 +63,9 @@ function no() {
 
 function fn(){
     info.style.display = "none"
+    if(type==1){
+        img.style.display = "block"
+    }
 }
 
 </script>
