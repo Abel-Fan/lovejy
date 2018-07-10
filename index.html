@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="rem.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header> LOVE </header>
+    <h3>"小姐姐，我观察你很久了"</h3>
+    <h4>做我女朋友好不好？</h4>
+
+    <div class="box">
+        <button onclick="ok()">好</button>
+        <button onclick="no()">不好</button>
+    </div>
+
+    <div class="info">
+        <h5>承诺</h5>
+        <div class="con">
+            工资上交
+        </div>
+        <div class="button" onclick="fn()">确定</div>
+    </div>
+
+</body>
+<script>
+let info = document.querySelector(".info")
+let con = document.querySelector(".con")
+let arr1 = [
+    "工资上交",
+    "家务全包",
+    "房产证写你名字",
+    "保大",
+    "答应我吧"
+]
+function ok() {
+    info.style.display = "block"
+    con.innerText = "真的吗？爱你😘"
+}
+let i = 0;
+function no() {
+    info.style.display = "block"
+    con.innerText = arr1[i]
+    i++
+    if(i>=arr1.length){
+        i=0;    
+    }
+}
+
+function fn(){
+    info.style.display = "none"
+}
+
+</script>
+</html>
